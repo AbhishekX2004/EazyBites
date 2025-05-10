@@ -4,7 +4,7 @@ const express = require("express");
 const axios = require("axios");
 const router = express.Router();
 const {getFirestore, FieldValue} = require("firebase-admin/firestore");
-const admin = require("firebase-admin"); // Add this to access the Realtime Database
+const admin = require("firebase-admin");
 const db = getFirestore();
 const {getStorage} = require("firebase-admin/storage");
 

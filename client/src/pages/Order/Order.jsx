@@ -323,6 +323,10 @@ const Order = () => {
 
     };
 
+    const handleSellerTimeout = () => {
+        setModalType('sellerTimeout');
+    }
+
     const handleFoodieTimeout = async () => {
         if (!currentOrderIds.globalOrderId) return;
 
@@ -583,7 +587,8 @@ const Order = () => {
                                     <h2 className="Order-modal-title">⏳ Waiting for Seller...</h2>
                                     <p className="Order-modal-message">Your order is being processed. The seller will respond within 1 minute.</p>
                                     <div className="Order-timer-container">
-                                        <CountdownTimer seconds={60} onComplete={() => { }} />
+                                        {/* <CountdownTimer seconds={60} onComplete={() => { }} /> */}
+                                        <CountdownTimer seconds={60} onComplete={handleSellerTimeout} />
                                     </div>
                                 </div>
                             )}
